@@ -1,0 +1,14 @@
+#---------------------------------------------------------------------
+#
+# Remove the need to type 'SiteName/index.php/controller/function/page'
+# in URL to access our pages.
+#
+# Instead, simply typing 'SiteName/page' will do
+#
+#---------------------------------------------------------------------
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|img|js|css|uploads|favicon.png)
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^(.*)$ ./index.php/$1 [L]

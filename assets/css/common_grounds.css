@@ -1,0 +1,214 @@
+@import url("fonts.css");
+
+/************************************
+ *
+ * Scrollbar Styling
+ *
+************************************/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #C0C0C0;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #997667;
+	border-radius: 15px;
+	border: 1px solid #331001;
+}
+
+
+/************************************
+ *
+ * Navbar
+ *
+************************************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #B51433;
+	padding: 12px 8%;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+header img {
+	width: 40px;
+	margin-right: 10px;
+	vertical-align: bottom; /* fix for img not centering vertically inside of <h1> */
+}
+
+header h1 {
+	font-family: "Humble Cafe Italic", sans-serif;
+	font-size: 2.5em;
+	color: #D1C2A8;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	font-size: 20px;
+	padding: 18px 25px;
+	text-decoration: none;
+	font-family: "Louis George Cafe", sans-serif;
+	transition: border-bottom 0.3s ease;
+	color: #D1C2A8;
+}
+
+nav ul li a:hover {
+	border-bottom: 3px solid #D1C2A8;
+}
+
+
+/************************************
+ *
+ * Image Showcase
+ *
+************************************/
+#img-showcase {
+	/* linear-gradient() is used here to darken the background image without editing tools */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/showcase.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 55vh;
+}
+
+#img-showcase .img-text {
+	text-align: center;
+	position: relative;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	color: #FFF;
+	font-family: "Louis George Cafe", sans-serif;
+}
+
+.img-text h2 {
+	font-size: 45px;
+}
+
+.img-text p {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+
+main .category {
+	background-color: #997667;
+	color: #FFF;
+	font-family: "Louis George Cafe", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 25px 0;
+}
+
+#insert form {
+	width: 35%;
+	background-color: #997667;
+	text-align: center;
+	margin: 1em auto;
+	padding: 1.5em;
+	color: #FFF;
+	font-family: "Louis George Cafe", sans-serif;
+	font-size: 20px;
+}
+
+#insert form input, select {
+	width: 100%;
+	padding: 10px;
+}
+
+#insert form input[type="submit"] {
+	border: none;
+	background-color: #11BBFF;
+}
+
+#insert form input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #33DDFF;
+	font-weight: bold;
+}
+
+#products .container {
+	display: grid;
+}
+
+.container {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.container .item {
+	background-color: #DFDFDF;
+	text-align: center;
+	padding: 2em 15px;
+	margin: 25px;
+	font-family: "Louis George Cafe", sans-serif;
+	color: #111;
+	box-shadow: 0 10px 5px #C0C0C0;
+	transition: transform 0.2s ease;
+}
+
+.item img {
+	margin-bottom: 10px;
+}
+
+.item h3 {
+	font-size: 22px;
+}
+
+.item p {
+	font-family: "Louis George Cafe", sans-serif;
+}
+
+.item hr {
+	margin: 10px 0;
+}
+
+.item a {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #B51433;
+	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+.item a:hover {
+	background-color: #D82666;
+}
+
+.item:hover {
+	transform: scale(1.07);
+}
+
+
+/************************************
+ *
+ * Footer
+ *
+************************************/
+footer {
+	padding: 2vh 0;
+	background-color: #1A1A1A;
+	color: white;
+	text-align: center;
+	font-family: "Louis George Cafe", sans-serif;
+	font-size: 1.5em;
+}
